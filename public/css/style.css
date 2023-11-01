@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' ,sans-serif;
+    box-sizing: border-box;
+
+}
+.hero{
+    background: #1d2026 ;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+nav .menu-img{
+     width: 25px;
+     margin-right:20px;
+     cursor: pointer;
+}
+nav .logo{
+    width: 160px;
+    cursor: pointer;
+     
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+button{
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;  
+    transition: background 0.5s;
+
+
+}
+button span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;    
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+}
+
+.lamp-container{
+    position: absolute;
+    top: -000;
+    left: 22%;
+    width: 200px;
+}
+.lamp{
+    width: 85%;
+    
+
+}
+.light{
+    position: absolute;
+    top:97%;
+    left: 38%;
+    transform: translateX(-50%);
+    width: 650px; 
+    opacity: 0; 
+    transition: opacity 0.5s;
+}
+.text-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+.text-container h1{
+   font-size: 80px;
+   font-weight: 400;
+}
+.text-container a{
+    text-decoration: none;
+    background: #00986f;
+   padding: 14px 40px;
+   display: inline-block;
+   color: #fff; 
+   font-size: 18px;
+   margin-top: 30px;
+   border-radius: 30px;
+
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+}
+.active{
+    background: green;
+}
+.active span{
+    background: #fff;
+    margin-left: 31px;
+
+}
+.on{
+    opacity: 1;
+}
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #4b2929db;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .developer {
+    background-color: #F7DFF5; 
+    color: #B22485;
+}   
+
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+
+.card-list .editor {
+    background-color: #d6f8d6; 
+    color: #205c20;
+}
+
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+
+
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  top: 400%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 95%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
