@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 
 const studentSchema = new mongoose.Schema({
     fullName: {
@@ -34,9 +35,29 @@ const studentSchema = new mongoose.Schema({
     },
     confirmPassword: {
         type: String,
-        required: true
-    }
+        required: true,
+    },
+    tokens:[{
+        token:{
+            type: String,
+            required: true
+        }
+    }]
 });
+
+studentSchema.methods.generateAuthToken = async function(){
+    try {
+        console.log(this._id);
+        const token = jwt.sign({_id:this._id.toString}, process.env.SECRET_KEY);
+        this.tokens =this.tokens.concat({token:token})
+        await this.save();
+        return token;
+    } catch (error) {
+        res.send("the error part"+ error);
+        console.log("the error part"+ error);
+        
+    }
+}
 
 // Now we need to create a collection
 const Register = mongoose.model("register", studentSchema);

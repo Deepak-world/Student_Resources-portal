@@ -88,3 +88,17 @@ showHiddenPass('login-pass','login-eye')
       </script>
    </body>
 </html>
+
+
+
+
+if (isMatch) {
+      res.status(201).render("index");
+    } else {
+      res.send("invalid password Details");
+    }
+  } catch (error) {
+    // Handle errors here
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
