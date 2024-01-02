@@ -4,6 +4,7 @@ const path = require("path");
 const hbs = require("hbs");
 require("./db/conn");
 const Register = require("./models/registers");
+const bodyparser = require("body-parser");
 // const { log } = require("console");
 // const { send } = require("process");
 
@@ -38,9 +39,9 @@ app.post("/register", async (req, res) => {
   try {
     const password = req.body.password;
     const cpassword = req.body.confirmPassword; // Correct the field name
-    // console.log(req.body);
+    console.log(req.body.password);
     if (password === cpassword) {
-
+     
 
       const registerStudent = new Register({
         fullName: req.body.fullName,
@@ -54,10 +55,16 @@ app.post("/register", async (req, res) => {
 
 
       });
-
-      const token = await registerStudent.generateAuthToken();
+        console.log("The Success part" + registerStudent);
+      // const token = await registerStudent.generateAuthToken();
       
       const Registered = await registerStudent.save();
+        // const Registered= await registerStudent.insert(registerStudent);
+
+      // The res.cookie() function is use to set the cookie name to value.
+      //The value parameter may be a string or object converted to JSON.
+      // res.cookie("jwt", token);
+      // console.log("cookies :", cookie);
 
       res.status(201).render("index"); // Correct the route name
 

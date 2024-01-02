@@ -45,20 +45,20 @@ const studentSchema = new mongoose.Schema({
     }]
 });
 
-studentSchema.methods.generateAuthToken = async function(){
-    try {
-        console.log(this._id);
-        const token = jwt.sign({_id:this._id.toString}, process.env.SECRET_KEY);
-        this.tokens =this.tokens.concat({token:token})
-        await this.save();
-        return token;
-    } catch (error) {
-        res.send("the error part"+ error);
-        console.log("the error part"+ error);
+// studentSchema.methods.generateAuthToken = async function(){
+//     try {
+//         console.log(this._id);
+//         const token = jwt.sign({_id:this._id.toString}, process.env.SECRET_KEY);
+//         this.tokens =this.tokens.concat({token:token})
+//         await this.save();
+//         return token;
+//     } catch (error) {
+//         res.send("the error part"+ error);
+//         console.log("the error part"+ error);
         
-    }
-}
+//     }
+// }
 
-// Now we need to create a collection
-const Register = mongoose.model("register", studentSchema);
-module.exports = Register;
+// // Now we need to create a collection
+// const Register = mongoose.model("register", studentSchema);
+// module.exports = Register;
